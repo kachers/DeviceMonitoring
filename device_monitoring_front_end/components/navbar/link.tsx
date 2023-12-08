@@ -9,9 +9,9 @@ interface LinkProps {
 
 const Link: React.FC<LinkProps> = ({ icon,href, text }) => {
   return (
-    <div className={`flex gap-32 ${styles.linkContainer}`}>
+    <div className={`flex gap32 ${styles.linkContainer}`}>
       <Image src={icon} alt="icon" width={24} height={24} className="w-full h-full" />
-      <a href={href} className={styles.link}>
+      <a href={href} className='font-inter text-base font-medium leading-22 tracking-tighter text-left text-neutral-500'>
       <span>{text}</span>
       </a>
     </div>
