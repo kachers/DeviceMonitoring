@@ -4,19 +4,25 @@ import './globals.css';
 
 export default function Home() {
   return (
-  <div className='flex flex-col items-start w-1440 h-900 '>
-   <div className='flex flex-col items-center gap-20 pb-20 bg-neutral-800'>
+  <div className='flex flex-col pb-44 w-screen h-[900px] bg-neutral-300 relative'>
+   <div className='flex flex-col items-center gap-20 pb-5 bg-neutral-800'>
     <Navbar />
-    <div className='flex flex-col items-center items-start gap-12 flex-1 w-1170'>
+    <div className='flex flex-col items-center items-start gap-3 flex-1 w-[1170px]'>
+      <p className='self-stretch text-neutral-500 gap-2'>Home /</p>
       <p className='self-stretch text-neutral-100 font-inter text-21 font-medium leading-28 tracking-tight'>
               Devices
       </p> 
     </div>
    </div>
-   <div className='flex flex-col items-center w-1440 pb-174'>
-    <span className='w-1440 h-40 absolute bg-neutral-800'></span>
+   <section className='flex flex-col items-center pb-44 bg-neutral-300'>
+       <span className='w-screen h-[40px] absolute bg-neutral-800'></span>
     <DevicesTable />
-   </div>
+   </section>
+   <footer className='flex flex-col items-start absolute bottom-0 py-4 px-[135px] gap-2.5'>
+      <div className='flex w-max[1170px] items-start self-stretch gap-2.5'>
+        <p className='font-inter font-normal text-[14px]/[22px] tracking-tight text-neutral-700'>© 2023 LCD. All rights reserved.</p>
+      </div>
+   </footer>
    </div>
   )
 }
