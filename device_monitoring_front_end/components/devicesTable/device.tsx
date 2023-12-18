@@ -2,9 +2,10 @@ import Image from 'next/image';
 
 const Device: React.FC = () => {
     return (
-      <div className= 'flex pt-3 pr-2 pb-3 pl-5 items-center gap-4 self-stretch rounded-md border border-neutral-400 bg-neutral-100'>
+      <div className= 'group flex pt-3 pr-2 pb-3 pl-5 items-center gap-4 self-stretch rounded-md border border-neutral-400 bg-neutral-100'>
          <div className='flex items-center gap-4 flex-1'>
             <div className='flex max-w-[250px] items-center gap-4 flex-1'>
+            <Image src="/status.svg" alt="Status" width={6} height={6}/>
               <div className='flex flex-col items-start flex-1'>
                 <p className="self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800">
                   Main Entry Intercom
@@ -24,11 +25,11 @@ const Device: React.FC = () => {
          </div>
          <div className='flex items-start gap-1'>
           <button className='flex px-4 py-2 justify-center items-center gap-2 rounded-md bg-neutral-200
-          font-inter font-medium text-[14px]/[20px] text-neutral-800'>
+          font-inter font-medium text-[14px]/[20px] text-neutral-800 opacity-0 group-hover:opacity-100 transition-opacity'>
               Settings
           </button>
           <button className='flex px-4 py-2 justify-center items-center gap-2 rounded-md bg-neutral-200
-          font-inter font-medium text-[14px]/[20px] text-neutral-800'>
+          font-inter font-medium text-[14px]/[20px] text-neutral-800 opacity-0 group-hover:opacity-100 transition-opacity'>
               Control
           </button>
           <button className='flex justify-center items-center w-[36px] h-[36px] rounded-md bg-neutral-100'>

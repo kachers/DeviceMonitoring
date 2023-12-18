@@ -8,12 +8,12 @@ interface LinkProps {
 
 const Link: React.FC<LinkProps> = ({ icon,href, text }) => {
   return (
-    <div className='flex items-center w-auto h-[24px] gap-2'>
+    <a href={href} className='flex items-center gap-2 w-auto h-[24px]
+      font-inter text-[14px]/[22px] font-medium tracking-[-0.205px] text-left text-neutral-500 
+      hover:text-neutral-100'>
       <Image src={icon} alt="icon" width={24} height={24} />
-      <a href={href} className='font-inter text-base font-medium leading-22 tracking-tighter text-left text-neutral-500'>
       {text}
-      </a>
-    </div>
+    </a>   
   );
 };
 

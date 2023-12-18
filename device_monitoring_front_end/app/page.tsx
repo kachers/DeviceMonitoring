@@ -7,9 +7,12 @@ export default function Home() {
   <div className='flex flex-col pb-44 w-screen h-[900px] bg-neutral-300 relative'>
    <div className='flex flex-col items-center gap-20 pb-5 bg-neutral-800'>
     <Navbar />
-    <div className='flex flex-col items-center items-start gap-3 flex-1 w-[1170px]'>
-      <p className='self-stretch text-neutral-500 gap-2'>Home /</p>
-      <p className='self-stretch text-neutral-100 font-inter text-21 font-medium leading-28 tracking-tight'>
+    <div className='flex flex-col items-start gap-3 flex-1 w-[1170px]'>
+      <div className='flex items-start gap-2'>
+        <p className='font-inter text-sm font-medium text-neutral-500 tracking-[-0.205px]'>Home</p>
+        <p className='font-inter text-sm font-medium text-neutral-500 tracking-[-0.205px] opacity-[0.2]'>/</p>
+      </div>
+      <p className='self-stretch text-neutral-100 font-inter text-[21px]/[28px] font-medium tracking-[-0.3px]'>
               Devices
       </p> 
     </div>
