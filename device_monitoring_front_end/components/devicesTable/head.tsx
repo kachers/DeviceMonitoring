@@ -13,7 +13,7 @@ const Head: React.FC<HeadProps> = ({ onFilterChange, currentFilter, onlineCount,
       <div className='flex items-start gap-1'>
         <button
           onClick={() => onFilterChange('Online')}
-          className={`flex p-1.5 pl-4 justify-center items-center gap-2.5 rounded-md border border-solid 
+          className={`flex p-1.5 pl-4 justify-center items-center gap-2.5 rounded-md border border-solid font-medium
           ${currentFilter === 'Online' ? 'border-primary-300 bg-primary-300 text-neutral-100' : 'border-neutral-400 bg-neutral-100 text-neutral-800'}`}>
           Online
           <label className={`flex px-2 py-1 justify-center items-center gap-2.5 rounded text-xs font-medium ${
@@ -24,7 +24,7 @@ const Head: React.FC<HeadProps> = ({ onFilterChange, currentFilter, onlineCount,
         </button>
         <button
           onClick={() => onFilterChange('Offline')}
-          className={`flex p-1.5 pl-4 justify-center items-center gap-2.5 rounded-md border border-solid 
+          className={`flex p-1.5 pl-4 justify-center items-center gap-2.5 rounded-md border border-solid font-medium
           ${currentFilter === 'Offline' ? 'border-primary-300 bg-primary-300 text-neutral-100' : 'border-neutral-400 bg-neutral-100 text-neutral-800'}`}>
           Offline
           <label className={`flex px-2 py-1 justify-center items-center gap-2.5 rounded text-xs font-medium ${

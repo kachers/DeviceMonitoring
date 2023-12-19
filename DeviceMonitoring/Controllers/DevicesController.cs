@@ -24,6 +24,7 @@ namespace DeviceMonitoring.Controllers
         public IActionResult Add(Device device)
         {
             _dbService.Create<Device>(device);
+
             return Ok("Device added");
         }
 
@@ -33,10 +34,12 @@ namespace DeviceMonitoring.Controllers
         //    return
         //}
 
-        //[HttpPut("Remove")]
-        //public IEnumerable<Device> Remove()
-        //{
-        //    return
-        //}
+        [HttpPut("Clear")]
+        public IActionResult Remove()
+        {
+            _dbService.DeleteRange<Device>();
+
+            return Ok();
+        }
     }
 }

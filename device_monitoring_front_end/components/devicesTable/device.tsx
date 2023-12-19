@@ -26,7 +26,7 @@ const Device: React.FC<DeviceProps> = ({ device }) => {
               {name}
             </p>
             <p className='text-neutral-700 font-Inter text-xs font-normal tracking-[-0.2px]'>
-              Connection: {location}
+              Connection: <span className='font-medium'>{location}</span>
             </p>
           </div>
         </div>
