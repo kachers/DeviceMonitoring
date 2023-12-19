@@ -3,16 +3,16 @@ import Image from 'next/image';
 interface DeviceProps {
   device: {
     id: number;
-    Name: string;
-    Model: string;
-    Location: string;
-    ConStat: string;
-    IsOnline: boolean;
+    name: string;
+    model: string;
+    location: string;
+    conStat: string;
+    isOnline: boolean;
   };
 }
 
 const Device: React.FC<DeviceProps> = ({ device }) => {
-  const { id, Name, Model, Location, ConStat, IsOnline } = device;
+  const { id, name, model, location, conStat, isOnline } = device;
 
   return (
     <div className='group flex pt-3 pr-2 pb-3 pl-5 items-center gap-4 self-stretch rounded-md border border-neutral-400 bg-neutral-100'>
@@ -21,20 +21,24 @@ const Device: React.FC<DeviceProps> = ({ device }) => {
           <Image src="/status.svg" alt="Status" width={6} height={6} />
           <div className='flex flex-col items-start flex-1'>
             <p className="self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800">
-              {Name}
+              {name}
             </p>
             <p className='text-neutral-700 font-Inter text-12 font-medium leading-16 tracking-tight letter-tight'>
-              Connection: {IsOnline ? 'Online' : 'Offline'}
+              Connection: {location}
             </p>
           </div>
         </div>
         <div className='flex max-w-[140px] flex-col items-start flex-1'>
-          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>Model</p>
-          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>{Model}</p>
+          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>
+            Model</p>
+          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>
+            {model}</p>
         </div>
         <div className='flex flex-col items-start flex-1'>
-          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>Con-stat</p>
-          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>{ConStat}</p>
+          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>
+            Con-stat</p>
+          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>
+            {conStat}</p>
         </div>
       </div>
       <div className='flex items-start gap-1'>

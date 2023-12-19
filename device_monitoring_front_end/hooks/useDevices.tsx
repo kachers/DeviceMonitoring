@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 
 interface Device {
     id: number; 
-    Name: string;
-    Model: string;
-    Location: string;
-    ConStat: string;
-    IsOnline: boolean;
+    name: string;
+    model: string;
+    location: string;
+    conStat: string;
+    isOnline: boolean;
   }
 
 const useDevices = () => {
