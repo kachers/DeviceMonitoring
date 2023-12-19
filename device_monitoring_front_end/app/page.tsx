@@ -23,7 +23,7 @@ export default function Home() {
       case 'Devices':
         return <DevicesTable />;
       default:
-        return <p>BAD</p>;
+        return <p>error</p>;
     }
   };
 

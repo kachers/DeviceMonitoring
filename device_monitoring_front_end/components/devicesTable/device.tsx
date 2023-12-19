@@ -18,26 +18,28 @@ const Device: React.FC<DeviceProps> = ({ device }) => {
     <div className='group flex pt-3 pr-2 pb-3 pl-5 items-center gap-4 self-stretch rounded-md border border-neutral-400 bg-neutral-100'>
       <div className='flex items-center gap-4 flex-1'>
         <div className='flex max-w-[250px] items-center gap-4 flex-1'>
-          <Image src="/status.svg" alt="Status" width={6} height={6} />
+          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6" fill={isOnline ? "#1B842C" : "#B8143D"}>
+            <circle cx="3" cy="3" r="3" />
+          </svg>
           <div className='flex flex-col items-start flex-1'>
-            <p className="self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800">
+            <p className="font-Inter text-[14px]/[22px] font-medium tracking-[-0.205px] text-neutral-800">
               {name}
             </p>
-            <p className='text-neutral-700 font-Inter text-12 font-medium leading-16 tracking-tight letter-tight'>
+            <p className='text-neutral-700 font-Inter text-xs font-normal tracking-[-0.2px]'>
               Connection: {location}
             </p>
           </div>
         </div>
         <div className='flex max-w-[140px] flex-col items-start flex-1'>
-          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>
+          <p className='text-neutral-700 font-Inter text-xs font-normal tracking-[-0.2px] opacity-70'>
             Model</p>
-          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>
+          <p className='font-Inter text-[14px]/[22px] font-medium tracking-[-0.205px] text-neutral-800'>
             {model}</p>
         </div>
         <div className='flex flex-col items-start flex-1'>
-          <p className='text-neutral-700 font-inter text-xs font-normal leading-16 tracking-tight'>
+          <p className='text-neutral-700 font-Inter text-xs font-normal tracking-[-0.2px] opacity-70'>
             Con-stat</p>
-          <p className='self-stretch font-Inter text-base font-semibold leading-6 tracking-tighter text-neutral-800'>
+          <p className='font-Inter text-[14px]/[22px] font-medium tracking-[-0.205px] text-neutral-800'>
             {conStat}</p>
         </div>
       </div>
