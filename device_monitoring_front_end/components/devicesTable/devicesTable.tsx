@@ -11,7 +11,6 @@ const DevicesTable: React.FC = () => {
   const [filteredDevices, setFilteredDevices] = useState(allDevices);
 
   useEffect(() => {
-    // Update filtered devices when filter or allDevices changes
     if (filter === 'All') {
       setFilteredDevices(allDevices);
     } else {
@@ -38,13 +37,12 @@ const DevicesTable: React.FC = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  // Calculate online and offline counts
   const onlineCount = allDevices.filter((device) => device.isOnline).length;
   const offlineCount = allDevices.filter((device) => !device.isOnline).length;
 
   const handleFilterChange = (newFilter: 'All' | 'Online' | 'Offline') => {
     setFilter(newFilter);
-    setCurrentPage(1); // Reset current page when changing filter
+    setCurrentPage(1);
   };
 
   return (

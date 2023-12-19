@@ -2,7 +2,7 @@
 
 import Navbar from '../components/navbar/navbar';
 import DevicesTable from '../components/devicesTable/devicesTable';
-import Dashboard from '../components/dashboard'; // Import your other components
+import Dashboard from '../components/dashboard';
 import Connectors from '../components/connectors';
 import GeneralSettings from '../components/generalSettings';
 import './globals.css';
