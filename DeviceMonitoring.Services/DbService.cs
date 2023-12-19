@@ -33,9 +33,10 @@ namespace DeviceMonitoring.Services
         _context.SaveChanges();
     }
 
-        public IEnumerable<T> Get<T>() where T : Entity
-        {
-            throw new NotImplementedException();
-        }
+    public IEnumerable<T> Get<T>() where T : Entity
+    {
+        return _context.Set<T>().ToList();
+    }
+
     }
 }

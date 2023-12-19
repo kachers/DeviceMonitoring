@@ -17,6 +17,9 @@ const useDevices = () => {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:8080/Devices/Get');
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+        }
         const data = await response.json();
         setDevices(data);
         setLoading(false);
