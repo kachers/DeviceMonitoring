@@ -33,9 +33,16 @@ namespace DeviceMonitoring.Services
         _context.SaveChanges();
     }
 
+    public void DeleteRange<T>() where T : Entity
+    {
+        _context.Set<T>().RemoveRange(_context.Set<T>());
+        _context.SaveChanges();
+    }
+
         public IEnumerable<T> Get<T>() where T : Entity
-        {
-            throw new NotImplementedException();
-        }
+    {
+        return _context.Set<T>().ToList();
+    }
+
     }
 }

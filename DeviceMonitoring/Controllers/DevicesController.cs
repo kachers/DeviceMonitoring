@@ -1,4 +1,5 @@
 ﻿using DeviceMonitoring.Core.Models;
+using DeviceMonitoring.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DeviceMonitoring.Controllers
@@ -7,28 +8,38 @@ namespace DeviceMonitoring.Controllers
     [Route("Devices")]
     public class DevicesController : ControllerBase
     {
-        [HttpGet("Get")]
-        public IEnumerable<Device> Get()
+        private readonly IDbService _dbService;
+
+        public DevicesController(IDbService DbService)
         {
-            return
+            _dbService = DbService;
+        }
+        [HttpGet("Get")]
+        public IActionResult Get()
+        {
+            return Ok(_dbService.Get<Device>().ToList());
         }
 
         [HttpPost("Add")]
-        public IEnumerable<Device> Add()
+        public IActionResult Add(Device device)
         {
-            return
+            _dbService.Create<Device>(device);
+
+            return Ok("Device added");
         }
 
-        [HttpPut("Update")]
-        public IEnumerable<Device> Update()
-        {
-            return
-        }
+        //[HttpPut("Update")]
+        //public IEnumerable<Device> Update()
+        //{
+        //    return
+        //}
 
-        [HttpPut("Remove")]
-        public IEnumerable<Device> Remove()
+        [HttpPut("Clear")]
+        public IActionResult Remove()
         {
-            return
+            _dbService.DeleteRange<Device>();
+
+            return Ok();
         }
     }
 }
